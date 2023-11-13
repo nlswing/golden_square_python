@@ -11,3 +11,7 @@ def test_check_codeword_close_returns_close():
 def test_check_codeword_correct_returns_correct():
     result = check_codeword('horse')
     assert result == 'Correct! Come in.'
+    
+def test_with_wrong_first_letter_and_right_last_letter():
+    result = check_codeword('mouse')
+    assert result == 'WRONG!'
