@@ -6,8 +6,3 @@ def make_snippet(words):
         first_five_words = split_words[0:5]
         create_string = ' '.join(first_five_words)
         return create_string + '...'
-        
-   
-        
-    
-    
