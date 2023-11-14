@@ -26,46 +26,40 @@ def est_reading_time(texts):
 ```Python
 
 """
-Given a lower and an uppercase word
-It returns a list with the uppercase word
+Given a text of empty words, time to read would be 0.
 """
-extract_uppercase("hello WORLD") => ["WORLD"]
+est_reading_time("") => 0
 
 """
-Given two uppercase words
-It returns a list with both words
+Given a text of 200 words, time to read would be 1.
 """
-extract_uppercase("HELLO WORLD") => ["HELLO", "WORLD"]
+est_reading_time("Hello " * 200) => 1
 
 """
-Given two lowercase words
-It returns an empty list
+Given a text of 150 words, time to read would be 1.
 """
-extract_uppercase("hello world") => []
+est_reading_time("Hello " * 150) => 1
 
 """
-Given a lower and a mixed case word
-It returns an empty list
+Given a text of 400 words, time to read would be 2.
 """
-extract_uppercase("hello WoRLD") => []
+est_reading_time("Hello " * 400) => 2
 
 """
-Given a lowercase word and an uppercase word with an exclamation mark
-It returns a list with the uppercase word, no exclamation mark
+Given a text of 25,000 words, time to read would 
 """
-extract_uppercase("hello WORLD!") => ["WORLD"]
+est_reading_time("Hello " * 25000) => 125
 
 """
-Given an empty string
-It returns an empty list
-"""
-extract_uppercase("") => []
+Given a text that uses punctuation, only words are counted.
 
 """
-Given a None value
-It throws an error
+est_reading_time("Hello, ! " * 200) => 1
+
 """
-extract_uppercase(None) throws an error
+Given a text that is not a string type. An error is thrown.
+"""
+est_reading_time(None) throws an error
 Encode each example as a test. You can add to the above list as you go.
 
 ```
