@@ -36,7 +36,7 @@ def test_when_task_completed_it_is_added_to_completed_task_list():
     todo_list.add(task_1)
     task_1.mark_complete()
     assert todo_list.complete() == [task_1]
-    
+# Add another test that checks if mutiple tasks are added but only some are completed.   
 '''
 When I complete multiple tasks
 They are added to a list of completed tasks.
