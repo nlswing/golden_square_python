@@ -4,7 +4,7 @@ class Todo:
     #   complete: a boolean representing whether the task is complete
 
     def __init__(self, task):
-        self.properties = {
+        self.task_list = {
             'task': task,
             'complete': False
         }
@@ -20,4 +20,6 @@ class Todo:
         #   Nothing
         # Side-effects:
         #   Sets the complete property to True
+        self.task_list['complete'] = True
+    
         pass
