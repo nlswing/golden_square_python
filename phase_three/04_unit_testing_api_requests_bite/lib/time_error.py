@@ -18,5 +18,7 @@ class TimeError:
         json = response.json()
         return json["unixtime"]
     
-# time_error = TimeError()
-# print(time_error.error())
+import time
+import requests
+time_error = TimeError(requests, time)
+print(time_error.error())
